@@ -34,7 +34,7 @@ public class StudentController {
          else {
             // Register new student
             if (existingStudent.isPresent()) {
-                throw new RuntimeException("Username already exists.");
+                throw new RuntimeException("Username already exist");
             }
             s.setPassword(passwordEncoder.encode(s.getPassword()));
            savedStudent=service.save(s);
